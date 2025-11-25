@@ -19,7 +19,7 @@ def transform():
         with open(file) as f:
             data = json.load(f)
 
-        timestamp_str = file.split("/")[-1].replace("btc_", "").replace(".json", "")
+        timestamp_str = file.split("\\")[-1].replace("btc_", "").replace(".json", "")
         ts = datetime.strptime(timestamp_str, "%Y%m%d_%H")
 
         price = data["bitcoin"]["usd"]
